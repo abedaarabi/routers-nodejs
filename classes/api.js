@@ -11,7 +11,7 @@ class Github {
   async getUser() {
     try {
       const profileResponse = await fetch(
-        `https://api.github.com/users/${10000000000000}?client_id=${
+        `https://api.github.com/users/${1000002343245320000000}?client_id=${
           this.client_id
         }&client_secret=${this.client_secret}`
       );
