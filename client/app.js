@@ -1,13 +1,13 @@
-function myfun(url) {
-  fetch(url)
-    .then((res) => {
-      if (res.ok) {
-        res.json();
-      } else {
-        throw new Error("HEllo");
-      }
-    })
-    .then((data) => console.log(data))
-    .catch((e) => console.log(e));
+
+
+// fetch("/api").then(res=>res.json()).then(data=>console.log(data)).catch(e=>console.log(e, "API Error"))
+
+
+async function git(api) {
+  const response = await fetch(api)
+  const data=  await response.json()
+  console.log(data);
+
 }
-myfun("/12");
+
+git("/api")

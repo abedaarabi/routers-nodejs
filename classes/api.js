@@ -8,12 +8,9 @@ class Github {
     this.repos_count = 15;
     this.repos_sort = "created: asc";
   }
-  async getUser() {
+  async getUser(url) {
     try {
-      const profileResponse = await fetch(
-        `https://api.github.com/users/${1000002343245320000000}?client_id=${
-          this.client_id
-        }&client_secret=${this.client_secret}`
+      const profileResponse = await fetch(url
       );
       const response = await profileResponse.json();
       return await response;
